@@ -2,6 +2,7 @@
 
 body{
 	font-family: 'Roboto', sans-serif;
+    position:   relative;
 }
 * {
 	margin: 0;
@@ -193,10 +194,17 @@ nav{
     border-bottom:0.1px solid rgb(225, 225, 225);
     justify-content:space-between;
     align-items:center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+i {
+    margin: 0px;
 }
 .nav-main{
     display:flex;
     gap:32px;
+    
 }
 .logo{
     font-size:16px;
