@@ -10,7 +10,7 @@
 <body>
     <nav class="nav">
         <div class="nav-main">
-            <div class="logo">MOLN<span>UI</span></div>
+            <div class="logo">Ternak <span>Lelang</span></div>
             <ul class="nav-links">
                 <li class="nav-link"><a href="">Home</a></li>
                 <li class="nav-link"><a href="">Our Team</a></li>
