@@ -220,15 +220,15 @@ i {
     gap: 40px;
     list-style: none;
 }
-a{
+.nav-link a{
     text-decoration: none;
     color:rgb(38, 38, 38);
     letter-spacing: -0.5px;
     font-weight:200;
+    transition: 0.2s;
 }
 a:hover{
-    color:rgb(122, 120, 120);
-    transition: all 0.5s ease;
+    color:rgba(0, 179, 255, 0.877);
 }
 .nav-link{
     text-decoration: none;
@@ -270,9 +270,10 @@ a:hover{
 }
 
 .btn-primary{
-    background-color:var(--black);
+    background-color: rgba(0, 179, 255, 0.877);
     color:var(--white);
     margin-left:8px;
+    transition:all 0.1s ease;
 }
 
 .btn-secondary{
@@ -281,9 +282,8 @@ a:hover{
     border:0.1px solid rgb(225, 225, 225);
 }
 .btn-primary:hover, .btn-secondary:hover{
-    background-color:var(--light-black);
+    background-color:rgba(0, 179, 255, 0.959);
     color:var(--black);
-    transition:all 0.5s ease;
 }
 .nav-mobile{
   display:none;

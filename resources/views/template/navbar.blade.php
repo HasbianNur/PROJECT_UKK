@@ -1,6 +1,6 @@
 <nav class="nav">
     <div class="nav-main">
-        <div class="logo">Ternak <span>Lelang</span></div>
+        <div class="logo">Ternak <spans style="color: rgb(0, 187, 255);">Lelang</span></div>
         <ul class="nav-links">
             <li class="nav-link"><a href="">Home</a></li>
             <li class="nav-link"><a href="">About</a></li>
