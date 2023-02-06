@@ -203,6 +203,7 @@ i {
 }
 .nav-main{
     display:flex;
+    align-items: center;
     gap:32px;
     
 }
@@ -219,6 +220,7 @@ i {
     display:flex;
     gap: 40px;
     list-style: none;
+    margin-bottom: 0px;
 }
 .nav-link a{
     text-decoration: none;
@@ -262,26 +264,26 @@ a:hover{
     transition: all 0.5s ease;
 }
 
-.btn{
+.btn2{
     padding:8px 16px;
     border-radius:50px;
     border:none;
 
 }
 
-.btn-primary{
+.btn2-primary{
     background-color: rgba(0, 179, 255, 0.877);
     color:var(--white);
     margin-left:8px;
     transition:all 0.1s ease;
 }
 
-.btn-secondary{
+.btn2-secondary{
     background-color:var(--white);
     color:var(--black);
     border:0.1px solid rgb(225, 225, 225);
 }
-.btn-primary:hover, .btn-secondary:hover{
+.btn2-primary:hover, .btn2-secondary:hover{
     background-color:rgba(0, 179, 255, 0.959);
     color:var(--black);
 }

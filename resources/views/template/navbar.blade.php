@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="nav-custom">
     <div class="nav-main">
         <div class="logo">Ternak <spans style="color: rgb(0, 187, 255);">Lelang</span></div>
         <ul class="nav-links">
@@ -15,11 +15,11 @@
     </div>
 
     <div class="cta">
-        <button class="btn btn-secondary">Log In</button>
-        <button class="btn btn-primary">Get Started</button>
+        <button class="btn2 btn2-secondary">Log In</button>
+        <button class="btn2 btn2-primary">Get Started</button>
     </div>
     <div class="menu">
-      <button class="btn btn-primary menu"><i class="bi-list"></i></button>
+      <button class="btn2 btn2-primary menu"><i class="bi-list"></i></button>
       <ul class="nav-mobile">
             <li class="nav-link"><a href="">Home</a></li>
             <li class="nav-link"><a href="">Our Team</a></li>

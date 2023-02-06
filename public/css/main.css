@@ -2,3 +2,7 @@
     margin-left: 250px;
     padding: 10px;
 }
+.carousel-image{
+    height: 300px;
+    border-radius: 5px;
+}
