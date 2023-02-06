@@ -9,25 +9,28 @@
             <a href="" class="item-sidebar">
                 <span>Elektronik</span>
             </a>
-                
+
             <a href="" class="item-sidebar">
                 <span>Game</span>
             </a>
-            
+
             <a href="" class="item-sidebar">
                 <span>Kendaraan</span>
             </a>
-            
+
             <a href="" class="item-sidebar">
                 <span>Seni</span>
-            </a>    
-            
+            </a>
+
             <a href="" class="item-sidebar">
                 <span>Barang Antik</span>
             </a>
-            
+
             <a href="" class="item-sidebar">
                 <span>Logam Mulia</span>
+            </a>
+            <a href="" class="item-sidebar">
+                <span>Kendaraan</span>
             </a>
         </div>
     </div>
