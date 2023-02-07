@@ -16,43 +16,43 @@
          <input type="radio" name="slide" id="login" checked>
          <input type="radio" name="slide" id="signup">
          <label for="login" class="slide login">Login</label>
-         <label for="signup" class="slide signup">Signup</label>
+         <label for="signup" class="slide signup">Daftar</label>
          <div class="slider-tab"></div>
       </div>
       <div class="form-inner">
          <form action="/auth/login" method="POST" class="login">
             @csrf
             <div class="field">
-               <input type="text" name="email" placeholder="Email Address" required>
+               <input type="text" name="email" placeholder="Alamat Email" required autocomplete="off">
             </div>
             <div class="field">
-               <input type="password" name="password" placeholder="Password" required>
+               <input type="password" name="password" placeholder="Password" required autocomplete="off">
             </div>
             <div class="pass-link">
-               <a href="#">Forgot password?</a>
+               <a href="/">kembali</a>
             </div>
             <div class="field btn">
                <div class="btn-layer"></div>
                <input type="submit" value="Login">
             </div>
             <div class="signup-link">
-               Not a member? <a href="">Signup now</a>
+               Belum Ada Akun? <a href="">Daftar Sekarang</a>
             </div>
          </form>
          <form action="/auth/daftar" method="POST" class="signup">
             @csrf
             <div class="field">
-               <input type="text" name="name" placeholder="Username" required>
+               <input type="text" name="name" placeholder="Username" required autocomplete="off">
             </div>
             <div class="field">
-               <input type="text" name="email" placeholder="Email Address" required>
+               <input type="text" name="email" placeholder="Alamat Email" required autocomplete="off">
             </div>
             <div class="field">
-               <input type="password" name="password" Password placeholder="Password" required>
+               <input type="password" name="password" Password placeholder="Password" required autocomplete="off">
             </div>
             <div class="field btn">
                <div class="btn-layer"></div>
-               <input type="submit" value="Signup">
+               <input type="submit" value="Daftar">
             </div>
          </form>
       </div>
