@@ -14,9 +14,25 @@
         </ul>
     </div>
 
-    <div class="cta">
-        <button class="btn2 btn2-secondary">Log In</button>
-        <button class="btn2 btn2-primary">Get Started</button>
+    <div class="cta" style="display:flex;align-items:center;">
+        @if(Auth::check())
+        
+            <div>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ auth()->user()->name }}
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">My Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="/logout">Logout</a></li>
+                  </ul>
+            </div>
+        @else
+        <div>
+            <button class="btn2 btn2-primary"><a href="">Cari Barang</a></button>
+            <button class="btn2 btn2-secondary"><a href="/auth">Masuk</a></button>
+        </div>
+        @endif
     </div>
     <div class="menu">
       <button class="btn2 btn2-primary menu"><i class="bi-list"></i></button>

@@ -277,15 +277,23 @@ a:hover{
     margin-left:8px;
     transition:all 0.1s ease;
 }
+.btn2-primary a{
+    text-decoration: none;
+    color: white;
+}
+.btn2-secondary a {
+    text-decoration: none;
+    color: black;
+}
 
 .btn2-secondary{
     background-color:var(--white);
-    color:var(--black);
     border:0.1px solid rgb(225, 225, 225);
+    transition: 0.2s;
 }
 .btn2-primary:hover, .btn2-secondary:hover{
     background-color:rgba(0, 179, 255, 0.959);
-    color:var(--black);
+    color:var(--white);
 }
 .nav-mobile{
   display:none;
