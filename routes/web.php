@@ -30,3 +30,4 @@ Route::POST('/auth/daftar', [AuthController::class, 'authDaftar']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/barang-lelang', [DashboardController::class, 'viewBarangLelang'])->middleware('auth');

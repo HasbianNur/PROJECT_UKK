@@ -30,7 +30,7 @@
         @else
         <div>
             <button class="btn2 btn2-primary"><a href="">Cari Barang</a></button>
-            <button class="btn2 btn2-secondary"><a href="/auth">Masuk</a></button>
+            <a class="btn2 btn2-secondary" style="text-decoration: none;color:black;" href="/auth">Masuk</a>
         </div>
         @endif
     </div>

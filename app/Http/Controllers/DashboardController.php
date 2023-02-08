@@ -11,4 +11,10 @@ class DashboardController extends Controller
             'title' => 'Beranda | Dashboard'
         ]);
     }
+    
+    public function viewBarangLelang(){
+        return view('dashboard.barang_lelang',[
+            'title' => 'Barang Lelang | Dashboard'
+        ]);
+    }
 }

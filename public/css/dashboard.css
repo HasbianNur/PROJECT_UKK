@@ -121,6 +121,10 @@ h1 {
 
 .nav__menus {
   list-style: none;
+
+}
+.nav__menus a{
+  text-decoration: none;
 }
 
 .nav__menu,
@@ -133,7 +137,7 @@ h1 {
 
 .nav__menu {
   color: #B8BED9;
-  transition: .3s ease-in-out;
+  /* transition: .3s ease-in-out; */
 }
 
 .nav__menu:hover {
@@ -179,7 +183,6 @@ h1 {
 
 .nav__logout {
   color: #FF4842;
-  transition: .3s ease-in-out;
 }
 
 .nav__logout:hover {
@@ -593,4 +596,24 @@ h1 {
   100% {
     transform: translateX(-130%);
   }
+}
+
+.header-content{
+  /* color: #4062ff; */
+}
+
+.button-create-barang{
+  padding: 10px 15px;
+  background-color: #4062FF;
+  width: max-content;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button-create-barang:hover{
+  background-color: #2e55ff;
+}
+.list-barang{
+  position: relative;
 }
