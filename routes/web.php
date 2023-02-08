@@ -22,6 +22,7 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/auth', [AuthController::class, 'view'])->name('login');
+Route::get('/profil', [AuthController::class, 'viewProfil']);
 
 Route::POST('/auth/login', [AuthController::class, 'authLogin']);
 Route::POST('/auth/daftar', [AuthController::class, 'authDaftar']);

@@ -7,8 +7,7 @@
     <title>Profile</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/profil.css" />
-
+    <link rel="stylesheet" href="/css/profil.css">
     <!-- Boxicons CSS -->
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
@@ -16,14 +15,15 @@
     />
   </head>
   <body>
+
     <div class="profile-card">
       <div class="image">
-        <img src="/img/foto-hasbi.png" alt="" class="profile-img" />
+        <img src="https://picsum.photos/200/300" alt="" class="profile-img" />
       </div>
 
       <div class="text-data">
-        <span class="name">Hasbian Nur</span>
-        <span class="job">Students & Progammer</span>
+        <span class="name">{{ auth()->user()->name }}</span>
+        <span class="job">User</span>
       </div>
 
       <div class="media-buttons">
@@ -40,6 +40,7 @@
           <i class="bx bxl-youtube"></i>
         </a>
       </div>
+      <span><a href="/">Kembali</a></span>
     </div>
   </body>
 </html>

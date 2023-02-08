@@ -22,7 +22,7 @@
                     {{ auth()->user()->name }}
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">My Profile</a></li>
+                    <li><a class="dropdown-item" href="/profil">My Profile</a></li>
                     <li><a class="dropdown-item" href="/dashboard">Open Dashboard</a></li>
                     <li><a class="dropdown-item text-danger" href="/logout">Logout</a></li>
                   </ul>

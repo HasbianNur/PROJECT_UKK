@@ -38,6 +38,10 @@ class AuthController extends Controller
         return back()->with('message', 'Registrasi Berhasil, Silahkan Login!');
     }
 
+    public function viewProfil(){
+        return view('profil.index');
+    }
+
     public function logout(Request $request){
         Auth::logout();
         $request->session()->invalidate();
