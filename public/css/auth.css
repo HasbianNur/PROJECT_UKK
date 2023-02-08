@@ -5,6 +5,12 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.logo{
+  font-size:16px;
+  text-transform: uppercase;
+  font-weight:bold;
+  letter-spacing: 4px;
+}
 html,body{
   display: grid;
   height: 100%;

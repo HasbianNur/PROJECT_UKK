@@ -1,6 +1,6 @@
 <nav class="nav-custom">
     <div class="nav-main">
-        <div class="logo">Ternak <spans style="color: rgb(0, 187, 255);">Lelang</span></div>
+        <div class="logo">Ternak <span style="color: rgb(0, 187, 255);">Lelang</span></div>
         <ul class="nav-links">
             <li class="nav-link"><a href="">Home</a></li>
             <li class="nav-link"><a href="">About</a></li>
@@ -23,7 +23,7 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">My Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/dashboard">Open Dashboard</a></li>
                     <li><a class="dropdown-item text-danger" href="/logout">Logout</a></li>
                   </ul>
             </div>

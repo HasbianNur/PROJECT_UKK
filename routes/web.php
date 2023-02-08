@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,11 @@ use App\Http\Controllers\HomeController;
 // });
 
 Route::get('/', [HomeController::class, 'home']);
-Route::get('/auth', [AuthController::class, 'view']);
+Route::get('/auth', [AuthController::class, 'view'])->name('login');
 
 Route::POST('/auth/login', [AuthController::class, 'authLogin']);
 Route::POST('/auth/daftar', [AuthController::class, 'authDaftar']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');

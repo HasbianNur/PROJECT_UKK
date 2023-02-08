@@ -3,12 +3,10 @@
 <div class="wrapper">
    <div class="title-text">
       <div class="title login">
-         <img src="/asset/ternak_lelang.jpg" alt="">
-         {{-- <span>Login Form</span> --}}
+        <div class="logo" style="font-size: 25px;">Ternak <span style="color: rgb(0, 187, 255);">Lelang</span></div>
       </div>
       <div class="title signup">
-         <img src="/asset/ternak_lelang.jpg" alt="">
-         {{-- <span>Signup Form</span> --}}
+         <div class="logo" style="font-size: 25px;">Ternak <span style="color: rgb(0, 187, 255);">Lelang</span></div>
       </div>
    </div>
    <div class="form-container">
