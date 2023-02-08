@@ -11,7 +11,7 @@
             fill="#919EAB" />
         </svg>
       </button>
-      <input type="text" placeholder="Search anything" class="search__input">
+      <input type="text" placeholder="Cari Semua" class="search__input">
     </div>
     <div class="bg-primary flex flex-justify-between flex-align-center banner">
       <div>
