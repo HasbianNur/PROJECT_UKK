@@ -65,7 +65,9 @@
                           <tr class="input-barang-box">
                             <td>Tanggal Lelang</td>
                             <td>:</td>
-                            <td><input type="text" style="background: #ccc;border: 1px solid #ccc;border-radius:5px;" readonly id="input-tanggal-lelang" name="tanggal"></td>
+                            <td>
+                              <input type="text" style="border: 1px solid #ccc;border-radius:5px;font-size:14px;color:black;" readonly id="input-tanggal-lelang" name="tanggal">
+                            </td>
                           </tr>
                           <tr class="input-barang-box">
                             <td>Deskripsi Barang</td>
@@ -98,7 +100,7 @@
   <script>
     $(document).ready(function(){
         const date = new Date();
-        $('#input-tanggal-lelang').val(date.getDate()+'-'+(date.getMonth() + 1)+'-'+date.getFullYear())
+        $('#input-tanggal-lelang').val(+date.getDate()+'-'+(date.getMonth() + 1)+'-'+date.getFullYear())
     })
   </script>
 
