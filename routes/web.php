@@ -31,3 +31,5 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::get('/dashboard/barang-lelang', [DashboardController::class, 'viewBarangLelang'])->middleware('auth');
+
+Route::post('/dashboard/barang-lelang/save', [DashboardController::class, 'storeBarangLelang']);

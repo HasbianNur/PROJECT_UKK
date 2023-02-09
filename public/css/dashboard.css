@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/nexa-bold');
+    @import url('http://fonts.cdnfonts.com/css/nexa-bold');
 
 * {
   margin: 0;
@@ -53,7 +53,7 @@ h1 {
 @media screen and (min-width: 375px){
   .nav__mobile {
     display: flex;
-  } 
+  }
   .nav__logo.active {
     display: none;
   }
@@ -631,4 +631,47 @@ h1 {
 }
 .input-barang-box td input:focus{
   outline: none;
+}
+.list-barang {
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-barang{
+    box-shadow: 0 0 5px #aaa;
+    margin-right: 10px;
+}
+.box-barang img{
+    width: 300px;
+    height: 150px;
+}
+.desc-barang{
+    padding: 5px;
+    font-family: sans-serif;
+}
+.desc-barang h5{
+    font-weight: bold;
+}
+.desc-barang table tr td{
+    font-size: 14px;
+    padding: 5px;
+}
+.action-barang{
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+.action-barang a, .action-barang a i{
+    text-decoration: none;
+    font-size: 20px;
+}
+.action-barang a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    transition: 0.2s;
+}
+.action-barang a:hover{
+    background-color: #eee;
+    cursor: pointer;
 }
