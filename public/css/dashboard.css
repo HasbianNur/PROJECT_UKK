@@ -617,3 +617,18 @@ h1 {
 .list-barang{
   position: relative;
 }
+.input-barang-box td input{
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.input-barang-box td textarea{
+  width: 100%;
+}
+.input-barang-box td textarea:focus {
+  outline: none;
+}
+.input-barang-box td input:focus{
+  outline: none;
+}
