@@ -1,7 +1,8 @@
 @extends('dashboard.template.template')
 @section('content')
     <div class="header-content">
-        <h2><i class="bi bi-box-fill"></i> Barang Lelang</h2>
+        <h2><i class="bi bi-person-fill"></i> Level : {{ auth()->user()->role }}</h2>
+        {{-- <h2><i class="bi bi-box-fill"></i> Barang Lelang</h2> --}}
         <div style="height: 4px;border-radius:8px;background-color: #4062ff;margin: 10px 0px;"></div>
     </div>
 
@@ -139,7 +140,7 @@
                     </div>
                     <div class="modal-body">
                         <form action="/dashboard/barang-lelang/save" method="POST" enctype="multipart/form-data">
-    
+
                             <div class="wrapper-input">
                                 @csrf
                                 <table class="table tabel-input-barang">
@@ -190,7 +191,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Modal -->
         <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">

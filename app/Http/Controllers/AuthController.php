@@ -17,12 +17,12 @@ class AuthController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
-        
+
         if (Auth::attempt($finaldata)) {
             $request->session()->regenerate();
             return redirect('/');
         }
-        
+
         abort(500);
     }
     public function authDaftar(Request $request){
@@ -34,7 +34,7 @@ class AuthController extends Controller
 
         $finaldata['password'] = Hash::make($finaldata['password']);
         User::create($finaldata);
-        
+
         return back()->with('message', 'Registrasi Berhasil, Silahkan Login!');
     }
 
