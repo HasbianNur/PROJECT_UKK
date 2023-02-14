@@ -34,7 +34,7 @@ html,body{
   display: flex;
   width: 200%;
 }
-.wrapper .title{
+.wrapper .title.login, .wrapper .title.signup{
   width: 50%;
   font-size: 35px;
   font-weight: 600;
@@ -47,7 +47,7 @@ html,body{
   height: 50px;
   width: 100%;
   overflow: hidden;
-  margin: 30px 0 10px 0;
+  margin: 20px 0 10px 0;
   justify-content: space-between;
   border: 1px solid lightgrey;
   border-radius: 5px;

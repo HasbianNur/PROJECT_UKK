@@ -12,12 +12,12 @@
 
         @if (session()->has('fail'))
         <div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
-            <div>{{ session('fail') }}</div>
+            <strong>{{ session('fail') }}</strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @elseif(session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show my-2" role="alert">
-            <div>{{ session('success') }}</div>
+            <strong>{{ session('success') }}</strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @endif
@@ -161,6 +161,16 @@
                                             <td><input type="text"
                                                     style="background: #ccc;border: 1px solid #ccc;border-radius:5px;" readonly
                                                     id="input-tanggal-lelang" name="tanggal"></td>
+                                        </tr>
+                                        <tr class="input-barang-box">
+                                            <td>Kategori</td>
+                                            <td>:</td>
+                                            <td>
+                                                <select name="kategori" class="w-100" id="">
+                                                    <option value="1">Game</option>
+                                                    <option value="2">Elektronik</option>
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr class="input-barang-box">
                                             <td>Deskripsi Barang</td>

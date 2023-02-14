@@ -30,7 +30,8 @@ class DashboardController extends Controller
             'nama' => 'required',
             'harga' => 'required',
             'tanggal' => 'required',
-            'deskripsi' => 'required|string'
+            'deskripsi' => 'required|string',
+            'kategori_id' => 'required|numeric'
         ]);
 
         if ($request->file('image')) {
@@ -41,6 +42,7 @@ class DashboardController extends Controller
 
             $finaldata = [
                 'user_id' => auth()->user()->id,
+                // 'kategori_id' => auth()->()->id,
                 'nama_barang' => $request->nama,
                 'harga_awal' => $request->harga,
                 'tgl' => $request->tanggal,

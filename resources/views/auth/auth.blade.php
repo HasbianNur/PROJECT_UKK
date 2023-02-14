@@ -10,11 +10,14 @@
       </div>
    </div>
    <div class="form-container">
+      @if (session()->has('fail'))
+            <div style="color:red;font-style:italic;text-align:center;">{{ session('fail') }}</div>
+      @endif
       <div class="slide-controls">
          <input type="radio" name="slide" id="login" checked>
          <input type="radio" name="slide" id="signup">
          <label for="login" class="slide login">Login</label>
-         <label for="signup" class="slide signup">Daftar</label>
+         <label for="signup" class="slide signup" id="daftar">Daftar</label>
          <div class="slider-tab"></div>
       </div>
       <div class="form-inner">
@@ -41,12 +44,21 @@
             @csrf
             <div class="field">
                <input type="text" name="name" placeholder="Username" required autocomplete="off">
+               @error('name')
+                  <small style="color:red;margin-bottom:5px;">{{ $message }}</small>
+               @enderror
             </div>
             <div class="field">
                <input type="text" name="email" placeholder="Alamat Email" required autocomplete="off">
+               @error('email')
+                  <small style="color:red;margin-bottom:5px;">{{ $message }}</small>
+               @enderror
             </div>
             <div class="field">
-               <input type="password" name="password" Password placeholder="Password" required autocomplete="off">
+               <input type="password" name="password" Password placeholder="Password"  required autocomplete="off">
+               @error('password')
+                   <small style="color:red;margin-bottom:5px;">{{ $message }}</small>
+               @enderror
             </div>
             <div class="field btn">
                <div class="btn-layer"></div>
@@ -56,6 +68,17 @@
       </div>
    </div>
 </div>
+@error('password')
+<script>
+   $("form.login").css({
+      'margin-left' : '-50%'
+   })
+   $("title-text .login").css({
+      'margin-left' : '-50%'
+   })
+   $('label.signup').trigger('click')
+</script>
+@enderror
 <script>
    const loginText = document.querySelector(".title-text .login");
    const loginForm = document.querySelector("form.login");

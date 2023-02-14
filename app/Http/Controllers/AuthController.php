@@ -22,8 +22,8 @@ class AuthController extends Controller
             $request->session()->regenerate();
             return redirect('/');
         }
-        
-        abort(500);
+
+        return back()->with('fail','Email atau Password Salah!');
     }
     public function authDaftar(Request $request){
         $finaldata = $request->validate([
