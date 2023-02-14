@@ -1,7 +1,7 @@
 @extends('dashboard.template.template')
 @section('content')
     <div class="header-content">
-        <h2><i class="bi bi-person-fill"></i> Level : {{ auth()->user()->role }}</h2>
+        <h2><i class="bi bi-person-fill"></i> Barang Lelang</h2>
         {{-- <h2><i class="bi bi-box-fill"></i> Barang Lelang</h2> --}}
         <div style="height: 4px;border-radius:8px;background-color: #4062ff;margin: 10px 0px;"></div>
     </div>

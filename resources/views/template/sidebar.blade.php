@@ -29,9 +29,6 @@
             <a href="" class="item-sidebar">
                 <span>Logam Mulia</span>
             </a>
-            <a href="" class="item-sidebar">
-                <span>Kendaraan</span>
-            </a>
         </div>
     </div>
 </div>
