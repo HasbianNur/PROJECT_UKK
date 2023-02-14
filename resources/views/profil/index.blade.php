@@ -25,7 +25,7 @@
 
         <div class="text-data">
             <span class="name">{{ auth()->user()->name }}</span>
-            <span class="job">User</span>
+            <span class="job">{{ auth()->user()->role }}</span>
         </div>
 
         <div class="media-buttons">

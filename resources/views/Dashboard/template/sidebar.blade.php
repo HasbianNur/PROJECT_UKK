@@ -24,11 +24,18 @@
                 <span> Barang Lelang</span>
             </a>
         </li>
+        {{-- <li class="mb-3">
+            <a class="nav__menu flex flex-align-center">
+                <i class="bi bi-person-fill" style="margin-right: 8px; font-size:20px;"></i>
+                <span>Role: {{ auth()->user()->role }}</span>
+            </a>
+        </li> --}}
 
     </ul>
     <ul class="nav__logouts flex flex-column flex-justify-between">
+        <a class="nav__logout flex flex-align-center text-decoration-none" style="color:black;" href="/"><i class="bi bi-house-door-fill"></i> Home</a>
         <li>
-            <a class="nav__logout flex flex-align-center" href="/logout">
+            <a class="nav__logout flex flex-align-center text-decoration-none" href="/logout">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -36,9 +43,6 @@
                         fill="black" />
                 </svg>
                 Logout
-            </a>
-            <a class="nav__logout flex flex-align-center" style="color:black;" href="/">
-                Ke Home...
             </a>
         </li>
     </ul>
