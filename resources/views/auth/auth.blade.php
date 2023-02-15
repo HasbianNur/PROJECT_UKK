@@ -30,15 +30,15 @@
                <input type="password" name="password" placeholder="Password" required autocomplete="off">
             </div>
             <div class="pass-link">
-               <a href="/">kembali</a>
+               <a href="/" class="text-decoration-none text-info">Kembali</a>
             </div>
             <div class="field btn">
                <div class="btn-layer"></div>
                <input type="submit" value="Login">
             </div>
-            <div><a href="/auth/redirect">Login Dengan Google</a></div>
+            <div><a href="/auth/redirect" class="text-decoration-none text-info"><i class="bi bi-google"></i> Login Dengan Google</a></div>
             <div class="signup-link">
-               Belum Ada Akun? <a href="">Daftar Sekarang</a>
+               Belum Ada Akun? <a href="" class="text-decoration-none">Daftar Sekarang</a>
             </div>
          </form>
          <form action="/auth/daftar" method="POST" class="signup">

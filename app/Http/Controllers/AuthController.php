@@ -54,7 +54,7 @@ class AuthController extends Controller
     public function redirectToProvider(){
         return  Socialite::driver('google')->redirect();
     }
-    
+
     public function handleProviderCallback(){
         try {
             $user_google    = Socialite::driver('google')->user();
@@ -80,7 +80,7 @@ class AuthController extends Controller
             }
 
         } catch (\Exception $e) {
-            return redirect()->route('/system');
+            return redirect('/');
         }
     }
 }
