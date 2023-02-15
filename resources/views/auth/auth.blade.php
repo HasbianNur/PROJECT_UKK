@@ -30,7 +30,7 @@
                <input type="password" name="password" placeholder="Password" required autocomplete="off">
             </div>
             <div class="pass-link">
-               <a href="/" class="text-decoration-none text-info">Kembali</a>
+               <a href="/" class="text-decoration-none text-info"><i class="bi bi-arrow-left-circle-fill"></i> Kembali</a>
             </div>
             <div class="field btn">
                <div class="btn-layer"></div>
