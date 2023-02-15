@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Barang;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -20,7 +21,8 @@ class DashboardController extends Controller
     {
         return view('dashboard.barang_lelang', [
             'title' => 'Barang Lelang | Dashboard',
-            'data' => Barang::where('user_id', auth()->user()->id)->get()
+            'data' => Barang::where('user_id', auth()->user()->id)->get(),
+            'kategori' => Kategori::all()
         ]);
     }
 
@@ -31,7 +33,7 @@ class DashboardController extends Controller
             'harga' => 'required',
             'tanggal' => 'required',
             'deskripsi' => 'required|string',
-            'kategori_id' => 'required|numeric'
+            'kategori' => 'required|numeric'
         ]);
 
         if ($request->file('image')) {
@@ -42,7 +44,7 @@ class DashboardController extends Controller
 
             $finaldata = [
                 'user_id' => auth()->user()->id,
-                // 'kategori_id' => auth()->()->id,
+                'kategori_id' => $request->kategori,
                 'nama_barang' => $request->nama,
                 'harga_awal' => $request->harga,
                 'tgl' => $request->tanggal,
@@ -61,7 +63,8 @@ class DashboardController extends Controller
             'nama' => 'required',
             'harga' => 'required',
             'tanggal' => 'required',
-            'deskripsi' => 'required|string'
+            'deskripsi' => 'required|string',
+            'kategori' => 'required|numeric'
         ]);
 
         $finaldata = [
@@ -69,8 +72,21 @@ class DashboardController extends Controller
             'harga_awal' => $request->harga,
             'tgl' => $request->tanggal,
             'deskripsi_barang' => $request->deskripsi,
+            'kategori_id' => $request->kategori
         ];
-        $getBarang = Barang::where('id_barang', $id)->first();
+        // try{
+
+        // }catch(Exception $E){
+
+        // }
+        $getBarang = Barang::where([
+            'id_barang' => $id,
+            'user_id' => auth()->user()->id
+        ])->first();
+
+        if(!isset($getBarang->id_barang)){
+            return back()->with('fail', 'Gagal Mengedit Barang!');
+        }
         if($request->file('image') != null){
             Storage::delete('/public/Image/'.$getBarang->image);
             $file = $request->file('image');
@@ -92,10 +108,9 @@ class DashboardController extends Controller
             'id_barang' => $request->id,
             'user_id' => auth()->user()->id
         ])->first();
-        if($getBarang->id_barang == null){
+        if(!isset($getBarang->id_barang)){
             return back()->with('fail', 'Barang tidak ditemukan');
         }
-
         Barang::where('id_barang', $request->id)->delete();
         return back()->with('success', 'Barang dihapus!');
     }

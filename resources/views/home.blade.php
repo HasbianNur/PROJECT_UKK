@@ -22,5 +22,28 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  
+  <div class="wrapper-content">
+    <div class="list-produk-home">
+      @foreach ($data as $item)
+      <div class="box-produk">
+        <img src="/storage/Image/{{ $item->image }}" class="image-produk" alt="">
+        <div class="box-desc-produk">
+          <header>{{ $item->nama_barang }}</header>
+          <div style="font-weight:bold;color:rgb(0, 187, 255);">Rp. {{ $item->harga_awal }}</div>
+          <table>
+            <tbody>
+                <tr>
+                    <td>Dilelang dari</td>
+                    <td style="padding-left:5px;">:</td>
+                    <td style="padding-left:5px;">{{ $item->tgl }}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+      @endforeach
+    </div>
+  </div>
 
 @endsection

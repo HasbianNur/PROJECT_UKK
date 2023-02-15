@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('history_lelang', function (Blueprint $table) {
-            $table->id('id_history');
-            $table->foreignId('id_barang');
-            $table->foreignId('id_user');
-            $table->foreignId('penawaran_harga');
-            $table->timestamps();
+        Schema::table('history_lelang', function (Blueprint $table) {
+            $table->dropColumn('id_lelang');
         });
     }
 
@@ -29,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('history_lelang');
+        Schema::table('history_lelang', function (Blueprint $table) {
+            //
+        });
     }
 };

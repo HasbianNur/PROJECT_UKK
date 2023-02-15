@@ -25,6 +25,8 @@ Route::get('/auth', [AuthController::class, 'view'])->name('login');
 Route::get('/profil', [AuthController::class, 'viewProfil']);
 
 Route::POST('/auth/login', [AuthController::class, 'authLogin']);
+Route::get('/auth/redirect', [AuthController::class, 'redirectToProvider']);
+Route::get('/auth/callback', [AuthController::class, 'handleProviderCallback']);
 Route::POST('/auth/daftar', [AuthController::class, 'authDaftar']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
@@ -35,3 +37,5 @@ Route::get('/dashboard/barang-lelang', [DashboardController::class, 'viewBarangL
 Route::post('/dashboard/barang-lelang/save', [DashboardController::class, 'storeBarangLelang']);
 Route::post('/dashboard/barang-lelang/edit/{id}', [DashboardController::class, 'editBarangLelang']);
 Route::post('/dashboard/barang-lelang/delete', [DashboardController::class, 'deleteBarangLelang']);
+
+

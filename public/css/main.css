@@ -9,3 +9,32 @@
     height: 300px;
     border-radius: 5px;
 }
+.wrapper-content{
+    padding-top: 10px;
+}
+.list-produk-home{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-produk{
+    margin: 12px 10px;
+    background-color: white;
+    box-shadow: 0 0 5px #aaa;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.box-produk:hover{
+    box-shadow: 0 0 10px #aaa;
+}
+.image-produk{
+    width: 220px;
+    height: 180px;
+}
+.box-desc-produk{
+    padding: 5px;
+}
+.box-desc-produk header{
+}
+.box-desc-produk table tr td{
+    font-size: 12px;
+}

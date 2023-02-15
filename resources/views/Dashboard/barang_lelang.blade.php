@@ -1,8 +1,7 @@
 @extends('dashboard.template.template')
 @section('content')
     <div class="header-content">
-        <h2><i class="bi bi-person-fill"></i> Barang Lelang</h2>
-        {{-- <h2><i class="bi bi-box-fill"></i> Barang Lelang</h2> --}}
+        <h2><i class="bi bi-box-fill"></i> Barang Lelang</h2>
         <div style="height: 4px;border-radius:8px;background-color: #4062ff;margin: 10px 0px;"></div>
     </div>
 
@@ -51,6 +50,7 @@
                             <i data-barang="{{ $item->tgl }}"></i>
                             <i data-barang="{{ $item->deskripsi_barang }}"></i>
                             <i data-barang="{{ $item->image }}"></i>
+                            <i data-barang="{{ $item->kategori_id }}"></i>
                         </div>
                         <a data-bs-toggle="modal" data-bs-target="#edit" class="button-edit"><i class="bi bi-pencil-square text-warning"></i></a>
                         <a data-bs-toggle="modal" data-bs-target="#delete" data-delete="{{ $item->id_barang }}" class="button-delete"><i class="bi bi-trash-fill text-danger"></i></a>
@@ -100,10 +100,21 @@
                                                 id="edit-tanggal-lelang" name="tanggal"></td>
                                     </tr>
                                     <tr class="input-barang-box">
+                                        <td>Kategori</td>
+                                        <td>:</td>
+                                        <td>
+                                            <select name="kategori" class="w-100" id="">
+                                                @foreach ($kategori as $item)
+                                                <option class="edit-option" id="edit-kategori{{ $item->id }}" value="{{ $item->id }}">{{ $item->nama }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr class="input-barang-box">
                                         <td>Deskripsi Barang</td>
                                         <td>:</td>
                                         <td>
-                                            <textarea type="text" required id="edit-deskripsi-lelang" name="deskripsi"></textarea>
+                                            <textarea style="padding: 5px;" type="text" required id="edit-deskripsi-lelang" name="deskripsi"></textarea>
                                         </td>
                                     </tr>
                                     <tr class="input-barang-box">
@@ -111,8 +122,8 @@
                                         <td>:</td>
                                         <td>
                                             <input class="form-control" type="file" name="image" id="formFile">
-                                            <small style="color:red;font-style:italic;font-size:12px;">*tidak boleh
-                                                kosong!</small>
+                                            <div style="font-size:12px;opacity:0.8">*foto wajib berukuran 250x150</div>
+                                            <div style="color:green;font-size:12px;opacity:0.8">*kosongkan jika tidak mengganti gambar!</div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -168,8 +179,9 @@
                                             <td>:</td>
                                             <td>
                                                 <select name="kategori" class="w-100" id="">
-                                                    <option value="1">Game</option>
-                                                    <option value="2">Elektronik</option>
+                                                    @foreach ($kategori as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                                                    @endforeach
                                                 </select>
                                             </td>
                                         </tr>
@@ -232,11 +244,13 @@
 
         $('.button-edit').click(function(){
             const data = $(this).parent().children('.list-data').children();
+            $('.edit-option').removeAttr('selected')
             $('#edit-nama-barang').val(data.eq(1).attr('data-barang'))
             $('#edit-harga-awal').val(data.eq(2).attr('data-barang'))
             $('#edit-tanggal-lelang').val(data.eq(3).attr('data-barang'))
             $('#edit-deskripsi-lelang').val(data.eq(4).attr('data-barang'))
             $('#edit-modal').attr('action', '/dashboard/barang-lelang/edit/'+data.eq(0).attr('data-barang'))
+            $('#edit-kategori'+data.eq(6).attr('data-barang')).attr('selected', true)
         });
 
         $('.button-delete').click(function(){
