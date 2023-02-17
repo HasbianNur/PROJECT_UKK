@@ -29,6 +29,7 @@
       <div class="box-produk">
         <img src="/storage/Image/{{ $item->image }}" class="image-produk" alt="">
         <div class="box-desc-produk">
+          <div class="kategori-produk"><i class="bi bi-tags-fill"></i> <span>{{ $item->kategori->nama }}</span></div>
           <header>{{ $item->nama_barang }}</header>
           <div style="font-weight:bold;color:rgb(0, 187, 255);">Rp. {{ $item->harga_awal }}</div>
           <table>

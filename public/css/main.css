@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap');
+
 .main-content{
     margin-left: 250px;
     padding: 10px;
@@ -6,7 +8,7 @@
     border-radius: 5px;
 }
 .carousel-image{
-    height: 300px;
+    height: 250px;
     border-radius: 5px;
 }
 .wrapper-content{
@@ -17,23 +19,32 @@
     flex-wrap: wrap;
 }
 .box-produk{
-    margin: 12px 10px;
+    margin-right: 15px;
+    margin-bottom: 10px;
     background-color: white;
     box-shadow: 0 0 5px #aaa;
     transition: 0.2s;
     cursor: pointer;
+    border-radius: 5px;
+}.box-produk img{
+    border-radius: 5px;
 }
 .box-produk:hover{
     box-shadow: 0 0 10px #aaa;
 }
 .image-produk{
-    width: 220px;
-    height: 180px;
+    width: 200px;
+    height: 160px;
 }
 .box-desc-produk{
     padding: 5px;
 }
+.box-desc-produk .kategori-produk i, .box-desc-produk .kategori-produk span{
+    font-size: 13px;
+}
 .box-desc-produk header{
+    font-family: Roboto!important;
+    font-weight: 300;
 }
 .box-desc-produk table tr td{
     font-size: 12px;
