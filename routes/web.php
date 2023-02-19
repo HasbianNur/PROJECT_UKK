@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LelangController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -38,4 +39,6 @@ Route::post('/dashboard/barang-lelang/save', [DashboardController::class, 'store
 Route::post('/dashboard/barang-lelang/edit/{id}', [DashboardController::class, 'editBarangLelang']);
 Route::post('/dashboard/barang-lelang/delete', [DashboardController::class, 'deleteBarangLelang']);
 
+Route::get('/barang/{id}', [HomeController::class, 'detailBarang'])->middleware('auth');
+Route::post('/barang/buat-penawaran', [LelangController::class, 'buatPenawaranLelang']);
 

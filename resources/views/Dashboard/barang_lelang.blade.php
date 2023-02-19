@@ -38,7 +38,11 @@
                             <tr>
                                 <td>Tawaran terakhir</td>
                                 <td style="padding-left:5px;">:</td>
-                                <td style="padding-left:5px;color:rgb(0, 187, 255);">Rp. {{ number_format($item->harga_awal, 0, ',', '.') }}<td>
+                                @if (isset($item->history_lelang[0]))
+                                <td style="padding-left:5px;color:rgb(0, 187, 255);">Rp. {{ number_format($item->history_lelang[0]->penawaran_harga, 0, ',', '.') }}<td>
+                                @else
+                                <td style="padding-left:5px;">Belum ada penawaran</td>
+                                @endif
                             </tr>
                             <tr>
                                 <td>Status Lelang</td>

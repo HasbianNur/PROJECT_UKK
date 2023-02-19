@@ -19,6 +19,8 @@
     flex-wrap: wrap;
 }
 .box-produk{
+    text-decoration: none;
+    color: black;
     margin-right: 1%;
     margin-bottom: 10px;
     background-color: white;
@@ -30,7 +32,8 @@
     overflow: hidden;
 }
 .box-produk:hover{
-    box-shadow: 0 0 10px #aaa;
+    box-shadow: 0 5px 5px #ccc;
+    color: black;
 }
 .image-produk{
     width: 100%;
@@ -51,6 +54,9 @@
 .box-desc-produk header{
     font-family: Roboto!important;
     font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .box-desc-produk table tr td{
     font-size: 12px;

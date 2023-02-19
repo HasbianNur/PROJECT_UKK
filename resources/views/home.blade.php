@@ -26,7 +26,7 @@
   <div class="wrapper-content">
     <div class="list-produk-home">
       @foreach ($data as $item)
-      <div class="box-produk">
+      <a class="box-produk" href="/barang/{{ $item->id_barang }}">
         <div class="image-produk">
           <img src="/storage/Image/{{ $item->image }}" alt="produk-image">
         </div>
@@ -54,7 +54,7 @@
             </tbody>
         </table>
         </div>
-      </div>
+      </a>
       @endforeach
     </div>
   </div>

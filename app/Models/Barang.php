@@ -16,4 +16,7 @@ class Barang extends Model
     public function kategori(){
         return $this->belongsTo(Kategori::class, 'kategori_id', 'id');
     }
+    public function history_lelang(){
+        return $this->hasMany(History_Lelang::class, 'id_barang', 'id_barang')->latest();
+    }
 }

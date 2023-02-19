@@ -642,6 +642,7 @@ h1 {
     box-shadow: 0 0 5px #aaa;
     margin-right: 15px;
     margin-bottom: 10px;
+    max-width: 250px;
 }
 .box-barang img{
     width: 250px;
@@ -655,6 +656,9 @@ h1 {
 .desc-barang h5{
     font-size: 15px;
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .desc-barang td {
   font-size: 13px;
