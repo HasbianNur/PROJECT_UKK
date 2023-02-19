@@ -27,17 +27,29 @@
     <div class="list-produk-home">
       @foreach ($data as $item)
       <div class="box-produk">
-        <img src="/storage/Image/{{ $item->image }}" class="image-produk" alt="">
+        <div class="image-produk">
+          <img src="/storage/Image/{{ $item->image }}" alt="produk-image">
+        </div>
         <div class="box-desc-produk">
           <div class="kategori-produk"><i class="bi bi-tags-fill"></i> <span>{{ $item->kategori->nama }}</span></div>
           <header>{{ $item->nama_barang }}</header>
-          <div style="font-weight:bold;color:rgb(0, 187, 255);">Rp. {{ $item->harga_awal }}</div>
+          <div style="font-weight:bold;color:rgb(0, 187, 255);">Rp. {{ number_format($item->harga_awal, 0, ',', '.') }}</div>
           <table>
             <tbody>
                 <tr>
-                    <td>Dilelang dari</td>
+                    @if (
+                        strtotime('+1 day', strtotime($item->created_at))
+                        >
+                        strtotime(date('Y-m-d H:i:s'))
+                        )
+                    <td>Berakhir pada</td>
                     <td style="padding-left:5px;">:</td>
-                    <td style="padding-left:5px;">{{ $item->tgl }}</td>
+                    <td style="padding-left:5px;" class="waktu" title="test">
+                        {{ date('d M Y | H:i:s', strtotime('+1 day', strtotime($item->created_at))) }}
+                    </td>
+                    @else
+                    <td style="color:green;">&#10004; Lelang Selesai</td>
+                    @endif
                 </tr>
             </tbody>
         </table>
