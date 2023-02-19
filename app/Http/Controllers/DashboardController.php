@@ -61,7 +61,6 @@ class DashboardController extends Controller
     public function editBarangLelang(Request $request, $id){
         $data = $request->validate([
             'nama' => 'required',
-            'harga' => 'required',
             'tanggal' => 'required',
             'deskripsi' => 'required|string',
             'kategori' => 'required|numeric'
@@ -69,7 +68,6 @@ class DashboardController extends Controller
 
         $finaldata = [
             'nama_barang' => $request->nama,
-            'harga_awal' => $request->harga,
             'tgl' => $request->tanggal,
             'deskripsi_barang' => $request->deskripsi,
             'kategori_id' => $request->kategori

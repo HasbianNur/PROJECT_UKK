@@ -31,14 +31,29 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td>Harga Lelang</td>
-                                <td>:</td>
-                                <td>Rp. {{ $item->harga_awal }}</td>
+                                <td>Harga awal</td>
+                                <td style="padding-left:5px;">:</td>
+                                <td style="padding-left:5px;color:rgb(0, 187, 255);">Rp. {{ number_format($item->harga_awal, 0, ',', '.') }}<td>
                             </tr>
                             <tr>
-                                <td>Dilelang dari</td>
-                                <td>:</td>
-                                <td>{{ $item->tgl }}</td>
+                                <td>Tawaran terakhir</td>
+                                <td style="padding-left:5px;">:</td>
+                                <td style="padding-left:5px;color:rgb(0, 187, 255);">Rp. {{ number_format($item->harga_awal, 0, ',', '.') }}<td>
+                            </tr>
+                            <tr>
+                                <td>Status Lelang</td>
+                                <td style="padding-left:5px;">:</td>
+                                <td style="padding-left:5px;">
+                                    @if (
+                                        strtotime('+1 day', strtotime($item->created_at))
+                                        >
+                                        strtotime(date('Y-m-d H:i:s'))
+                                        )
+                                        <span style="color:orange;">Sedang dilelang</span>
+                                    @else
+                                        <span style="color:green;">Lelang Selesai</span>
+                                    @endif
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -90,7 +105,7 @@
                                     <tr class="input-barang-box">
                                         <td>Harga Awal</td>
                                         <td>:</td>
-                                        <td><input type="number" required id="edit-harga-awal" name="harga" placeholder="Rp."></td>
+                                        <td><input type="number" required id="edit-harga-awal" disabled placeholder="Rp."></td>
                                     </tr>
                                     <tr class="input-barang-box">
                                         <td>Tanggal Lelang</td>
