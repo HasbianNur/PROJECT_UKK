@@ -9,7 +9,7 @@ class LelangController extends Controller
 {
     public function buatPenawaranLelang(Request $request){
         $getHistory = History_Lelang::where('id_barang', $request->barang)->latest()->first();
-        $penawaran = $getHistory->id_history == null ? 0 : $getHistory->penawaran_harga;
+        $penawaran = !isset($getHistory->id_history) ? 0 : $getHistory->penawaran_harga;
         $data = $request->validate([
             'barang' => 'required|numeric',
             'bid' => 'required|numeric|min:'.$penawaran

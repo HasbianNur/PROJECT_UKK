@@ -31,7 +31,7 @@ class HomeController extends Controller
             abort(404);
         }
         return view('detailbarang', [
-            'title' => $getBarang->name,
+            'title' => $getBarang->nama_barang,
             'data' => $getBarang,
             'kategori' => Kategori::all(),
             'tawaran' => $getHistory,
