@@ -21,6 +21,9 @@ class LelangController extends Controller
                 return back()->with('message', 'Anda tidak bisa menawar barang anda sendiri!');
             }
         }
+        if(strtotime('+1 day', strtotime($getBarang->created_at)) < strtotime(date('Y-m-d H:i:s'))){
+            return abort(404);
+        }
         $insertData = [
             'id_user' => auth()->user()->id,
             'id_barang' => $data['barang'],
