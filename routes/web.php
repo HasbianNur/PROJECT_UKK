@@ -36,7 +36,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('aut
 Route::get('/dashboard/barang-lelang', [DashboardController::class, 'viewBarangLelang'])->middleware('auth');
 
 Route::post('/dashboard/barang-lelang/save', [DashboardController::class, 'storeBarangLelang']);
-Route::post('/dashboard/barang-lelang/edit/{id}', [DashboardController::class, 'editBarangLelang']);
+Route::post('/dashboard/barang-lelang/edit/{barang:id_barang}', [DashboardController::class, 'editBarangLelang']);
 Route::post('/dashboard/barang-lelang/delete', [DashboardController::class, 'deleteBarangLelang']);
 
 Route::get('/barang/{id}', [HomeController::class, 'detailBarang'])->middleware('auth');

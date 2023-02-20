@@ -58,7 +58,8 @@ class DashboardController extends Controller
         }
     }
 
-    public function editBarangLelang(Request $request, $id){
+    public function editBarangLelang(Barang $barang, Request $request){
+        $this->authorize('update', $barang);
         $data = $request->validate([
             'nama' => 'required',
             'tanggal' => 'required',
@@ -72,13 +73,8 @@ class DashboardController extends Controller
             'deskripsi_barang' => $request->deskripsi,
             'kategori_id' => $request->kategori
         ];
-        // try{
-
-        // }catch(Exception $E){
-
-        // }
         $getBarang = Barang::where([
-            'id_barang' => $id,
+            'id_barang' => $barang->id_barang,
             'user_id' => auth()->user()->id
         ])->first();
 
@@ -93,7 +89,7 @@ class DashboardController extends Controller
             $finaldata['image'] = $filename;
         }
 
-        Barang::where('id_barang', $id)->update($finaldata);
+        Barang::where('id_barang', $barang->id_barang)->update($finaldata);
 
         return back()->with('success', 'Edit Data Success!');
     }
