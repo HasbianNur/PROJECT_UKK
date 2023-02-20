@@ -1,0 +1,84 @@
+.wrapper-content{
+    display: flex;
+}
+.img-barang img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.desc-barang{
+    padding-left: 10px;
+}
+.desc-barang header{
+    font-size: 20px;
+    font-family: roboto;
+    font-weight: bold;
+}
+.harga-awal span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.lelang-tertinggi {
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #eee;
+    box-shadow: 0 2px 5px #ccc;
+}
+.lelang-tertinggi header{
+    color: #555;
+    font-size: 14px;;
+}
+.tawaran-lelang {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.tawaran-lelang img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.data-penawar{
+    line-height: 1;
+    font-size: 12px;
+    padding-left: 5px;
+    display: flex;
+}
+.tawaran-harga{
+    font-weight: bold;
+    color: rgb(0, 187, 255);
+    padding-left: 10px;
+}
+.input-tawaran input{
+    background-color: white;
+    box-shadow: 0 1px 5px #ccc;
+    border: 1px solid #ccc;
+    padding: 10px 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+.input-tawaran input:focus{
+    border: 1px solid #ccc;
+    outline: none;
+}
+.button-submit {
+    background-color: rgb(0, 187, 255);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: roboto;
+    box-shadow: 0 1px 5px #ccc;
+    transition: 0.2s;
+}
+.button-submit:hover{
+    background-color: rgb(0, 168, 229);
+}
