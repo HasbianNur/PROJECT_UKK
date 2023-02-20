@@ -2,15 +2,15 @@
     <div class="nav-main">
         <div class="logo">Ternak <span style="color: rgb(0, 187, 255);">Lelang</span></div>
         <ul class="nav-links">
-            <li class="nav-link"><a href="">Home</a></li>
-            <li class="nav-link"><a href="">About</a></li>
-            <li class="nav-link dropdown"><a href="" class="dropdown">Services <i class="bi bi-chevron-compact-down"></i></a>
+            <li class="nav-link"><a href="/">Home</a></li>
+            <li class="nav-link"><a href="#">About</a></li>
+            <li class="nav-link dropdown"><a href="#" class="dropdown">Services <i class="bi bi-chevron-compact-down"></i></a>
             <ul class="dropdown-list">
-                <li class="nav-link"><a href="">Service 1</a>
-                <li class="nav-link"><a href="">Service 2</a>
+                <li class="nav-link"><a href="#">Service 1</a>
+                <li class="nav-link"><a href="#">Service 2</a>
             </ul>
             </li>
-            <li class="nav-link"><a href="">Contact</a></li>
+            <li class="nav-link"><a href="#">Contact</a></li>
         </ul>
     </div>
 

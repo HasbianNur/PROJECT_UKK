@@ -40,8 +40,20 @@
                 <button class="button-submit" type="submit">Buat Tawaran</button>
             </form>
         </div>
+        @if (session()->has('success'))
+          <div class="alert alert-success alert-dismissible fade show my-2" role="alert">
+            <span>{{ session('success') }}</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        @elseif(session()->has('message'))
+          <div class="alert alert-danger alert-dismissible fade show my-2" role="alert">
+            <span>{{ session('message') }}</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        @endif
        
     </div>
 </div>
+
 
 @endsection

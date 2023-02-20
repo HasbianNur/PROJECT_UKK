@@ -11,11 +11,16 @@ class LelangController extends Controller
     public function buatPenawaranLelang(Request $request){
         $getHistory = History_Lelang::where('id_barang', $request->barang)->latest()->first();
         $getBarang = Barang::where('id_barang', $request->barang)->first();
-        $penawaran = !isset($getHistory->id_history) ? $getBarang->harga_awal : $getHistory->penawaran_harga;
+        $penawaran = !isset($getHistory->id_history) ? $getBarang->harga_awal + 1 : $getHistory->penawaran_harga + 1;
         $data = $request->validate([
             'barang' => 'required|numeric',
             'bid' => 'required|numeric|min:'.$penawaran
         ]);
+        if(isset($getBarang->id_barang)){
+            if($getBarang->user_id == auth()->user()->id){
+                return back()->with('message', 'Anda tidak bisa menawar barang anda sendiri!');
+            }
+        }
         $insertData = [
             'id_user' => auth()->user()->id,
             'id_barang' => $data['barang'],
