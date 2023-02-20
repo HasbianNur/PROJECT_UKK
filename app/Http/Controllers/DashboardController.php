@@ -94,14 +94,17 @@ class DashboardController extends Controller
         return back()->with('success', 'Edit Data Success!');
     }
 
-    public function deleteBarangLelang(Request $request){
+    public function deleteBarangLelang(Barang $barang,Request $request){
         if($request->id == null){
             return back()->with('fail', 'Terjadi Kesalahan Input');
         }
         $getBarang = Barang::where([
             'id_barang' => $request->id,
             'user_id' => auth()->user()->id
-        ])->first();
+            ])->first();
+
+        $this->authorize('delete', $getBarang);
+        
         if(!isset($getBarang->id_barang)){
             return back()->with('fail', 'Barang tidak ditemukan');
         }

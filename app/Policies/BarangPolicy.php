@@ -23,4 +23,7 @@ class BarangPolicy
     public function update(User $user, Barang $barang){
         return $user->id === $barang->user_id;
     }
+    public function delete(User $user, Barang $barang){
+        return $user->id === $barang->user_id;
+    }
 }
