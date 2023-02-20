@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\History_Lelang;
+use App\Models\Barang;
 use Illuminate\Http\Request;
+use App\Models\History_Lelang;
 
 class LelangController extends Controller
 {
     public function buatPenawaranLelang(Request $request){
         $getHistory = History_Lelang::where('id_barang', $request->barang)->latest()->first();
-        $penawaran = !isset($getHistory->id_history) ? 0 : $getHistory->penawaran_harga;
+        $getBarang = Barang::where('id_barang', $request->barang)->first();
+        $penawaran = !isset($getHistory->id_history) ? $getBarang->harga_awal : $getHistory->penawaran_harga;
         $data = $request->validate([
             'barang' => 'required|numeric',
             'bid' => 'required|numeric|min:'.$penawaran

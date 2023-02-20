@@ -30,7 +30,7 @@
                 @csrf
                 <input type="hidden" name="barang" value="{{ $data->id_barang }}" >
                 <div>
-                    <input type="number" name="bid" min="@if(isset($tawaran->penawaran_harga)) {{ $tawaran->penawaran_harga }} @else 0 @endif" id="tawaran"  required placeholder="Rp.">
+                    <input type="number" name="bid" min="@if(isset($tawaran->penawaran_harga)){{$tawaran->penawaran_harga}}@else{{$data->harga_awal}}@endif" id="tawaran"  required placeholder="Rp.">
                 </div>
                 @error('bid')
                 <div>

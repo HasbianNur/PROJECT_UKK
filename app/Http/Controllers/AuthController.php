@@ -38,10 +38,6 @@ class AuthController extends Controller
         $finaldata['password'] = Hash::make($finaldata['password']);
         
         User::create($finaldata);
-        Saldo::create([
-            'user_id' => auth()->user()->id,
-            'saldo' => '0'
-        ]);
 
         return back()->with('message', 'Registrasi Berhasil, Silahkan Login!');
     }
@@ -79,10 +75,6 @@ class AuthController extends Controller
                     'name'              => $user_google->getName(),
                     'password'          => 0,
                     'email_verified_at' => now() // fungsi tgl saat ini
-                ]);
-                Saldo::create([
-                    'user_id' => auth()->user()->id,
-                    'saldo' => 0
                 ]);
 
                 auth()->login($create, true);
